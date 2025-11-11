@@ -18,19 +18,14 @@ Città: <input type="text" id="citta"><br><br>
 
 <script>
 function mostraDati() {
-    // prendo i valori dagli input
     var nome = document.getElementById("nome").value;
     var cognome = document.getElementById("cognome").value;
     var indirizzo = document.getElementById("indirizzo").value;
     var citta = document.getElementById("citta").value;
-
-    // creo la tabella con i dati
     var tabella = "<table border='1'>" +
                   "<tr><th>Nome</th><th>Cognome</th><th>Indirizzo</th><th>Città</th></tr>" +
                   "<tr><td>" + nome + "</td><td>" + cognome + "</td><td>" + indirizzo + "</td><td>" + citta + "</td></tr>" +
                   "</table>";
-
-    // metto la tabella dentro il div
     document.getElementById("risultato").innerHTML = tabella;
 }
 </script>
