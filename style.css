@@ -1,19 +1,31 @@
-/* Stile generale */
+/* Stile base */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #f9fafb;
 }
 
-/* Barra del menu */
+/* Contenitore per più righe di menu (ogni riga sarà centrata) */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra orizzontalmente */
+    gap: 10px;
+    padding-top: 10px;
+}
+
+/* Singola barra menu */
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* centra i link */
     align-items: center;
+    width: 90%;
+    max-width: 900px;
     background-color: #1e293b;
     padding: 10px 30px;
-    color: white;
+    border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    position: relative;
 }
 
 /* Lista dei link */
@@ -37,9 +49,11 @@ body {
     color: #38bdf8;
 }
 
-/* Nome progetto a destra */
+/* Nome progetto a destra (posizione assoluta per restare sulla destra ma allineato con la barra) */
 .project-name {
+    position: absolute;
+    right: 20px;
+    color: #f1f5f9;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #f1f5f9;
 }
